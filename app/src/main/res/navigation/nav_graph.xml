@@ -9,12 +9,21 @@
         android:id="@+id/navigation_home"
         android:name="practice.com.bottomnavigationusingnavigationcomponent.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@+id/navigation_dashboard" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="practice.com.bottomnavigationusingnavigationcomponent.DashboardFragment"
         android:label="fragment_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_dashboard" >
+        <argument
+            android:name="nameArgs"
+            app:argType="string"
+            android:defaultValue="No Name" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="practice.com.bottomnavigationusingnavigationcomponent.NotificationFragment"
